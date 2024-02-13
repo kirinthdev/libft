@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 12:33:26 by sergmart          #+#    #+#             */
-/*   Updated: 2024/01/24 12:38:03 by sergmart         ###   ########.fr       */
+/*   Created: 2024/01/29 11:28:21 by sergmart          #+#    #+#             */
+/*   Updated: 2024/02/09 11:52:24 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
-{
-    return (ft_isalpha(c) || ft_isdigit(c));
-}
+#include "libft.h"
 
-/****** MAIN
-#include <ctype.h>
-#include <stdio.h>
-
-int main(void)
+void	*ft_memset(void *b, int c, unsigned long len)
 {
-    printf("%d", isalnum(78));
-    printf("%d", ft_isalnum(78));
-    return (0);
+	unsigned long count;
+	unsigned char *ptr;
+
+	ptr = b;
+	count = 0;
+	while (count < len)
+	{
+		*ptr = (unsigned char)c;
+		count++;
+		ptr++;
+	}
+	return (ptr - count);
 }
-******/

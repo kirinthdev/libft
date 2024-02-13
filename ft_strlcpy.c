@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 12:12:13 by sergmart          #+#    #+#             */
-/*   Updated: 2024/01/24 12:16:32 by sergmart         ###   ########.fr       */
+/*   Created: 2024/01/29 11:27:14 by sergmart          #+#    #+#             */
+/*   Updated: 2024/02/09 11:56:31 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
-{
-    return (ft_islower(c) || ft_isupper(c));
-}
+#include "libft.h"
 
-/******* MAIN
-#include <ctype.h>
-#include <stdio.h>
-
-int main(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    printf("%d", isalpha(65));
-    printf("%d", ft_isalpha(65));
-    return (0);
+	size_t i;
+
+	i = 0;
+	if (!size)
+		return (ft_strlen(src));
+	i = 0;
+	while (src[i] && i < (size - 1))
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
-*******/
