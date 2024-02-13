@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:21:14 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:53:56 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:10:24 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *dst, char const *src);
 char	**ft_split(const char *s, char delim);
-char    *itoa(int n);
+char    *ft_itoa(int n);
 #endif

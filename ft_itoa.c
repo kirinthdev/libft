@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:45:06 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:51:57 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/13 12:10:36 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static int	*getdigits(int n, int size)
 	return (a);
 }
 
-char	*itoa(int n)
+char	*ft_itoa(int n)
 {
 	char *nbr;
 	int *digits;
