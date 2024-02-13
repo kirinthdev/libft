@@ -6,7 +6,7 @@
 #    By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 12:46:36 by sergmart          #+#    #+#              #
-#    Updated: 2024/02/08 14:48:42 by sergmart         ###   ########.fr        #
+#    Updated: 2024/02/13 15:55:10 by sergmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,12 @@ SRCS = ft_isalpha.c \
 		ft_strjoin.c \
 		ft_split.c \
 		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
 
 # ---------------------------------------------------------------------------- #
 #                                   UTENSILS                                   #

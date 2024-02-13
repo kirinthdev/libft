@@ -6,95 +6,88 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:45:06 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 12:10:36 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/13 17:09:20 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+count_num: Cuenta el número de dígitos en un número entero.
+revert_array: Invierte el orden de los elementos en un array de enteros.
+get_num: Extrae los dígitos de un número entero y los guarda en un array.
+ft_itoa: Convierte un número entero en una cadena de caracteres.*/
+
 #include "libft.h"
+#include <string.h>
 
-static int	digitcount(int n)
+size_t	count_num(int n, size_t len)
 {
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n != 0)
+	if (n < 0)
 	{
-		n /= 10;
-		i++;
+		n = -n;
+		len++;
 	}
-	return (i);
+	while (n >= 10)
+	{
+		n = n / 10;
+		len++;
+	}
+	return (len);
 }
 
-static int	*revarray(int *a, int size)
+void	fill(int n, size_t len, char *s)
 {
-	int	tmp;
-	int	i;
-
-	tmp = 0;
-	i = 0;
-	while (i < size / 2)
+	s[len] = '\0';
+	len--;
+	if (n < 0)
 	{
-		tmp = a[i];
-		a[i] = a[size - i - 1];
-		a[size - i - 1] = tmp;
-		i++;
+		s[0] = '-';
+		n = -n;
 	}
-	return (a);
+	if (n == 0)
+		s[0] = '0';
+	while (n > 0)
+	{
+		s[len] = (n % 10) + '0';
+		len--;
+		n = n / 10;
+	}
 }
 
-static int	*getdigits(int n, int size)
+void	max_min(int n, char **s)
 {
-	int	*a;
-	int	r;
-	int	i;
-
-	r = 0;
-	i = 0;
-	a = malloc(size * sizeof(int));
-	if (a == NULL)
-		return (NULL);
-	if (n == 0)
-		a[i] = 0;
-	while (n != 0)
+	if (n == 2147483647)
 	{
-		r = n % 10;
-		if (r < 0)
-			r *= -1;
-		a[i] = r;
-		i++;
-		n /= 10;
+		*s = (char *)malloc((11) * sizeof(char));
+		if (!*s)
+			return ;
+		ft_strlcpy(*s, "2147483647", 11);
 	}
-	a = revarray(a, size);
-	return (a);
+	else
+	{
+		*s = (char *)malloc((12) * sizeof(char));
+		if (!*s)
+			return ;
+		ft_strlcpy(*s, "-2147483648", 12);
+	}
 }
 
 char	*ft_itoa(int n)
 {
-	char *nbr;
-	int *digits;
-	int digits_size;
-	int i;
-	int j;
+	char *s;
+	size_t len;
 
-	digits_size = digitcount(n);
-	digits = getdigits(n, digits_size);
-	if (n < 0)
-		digits_size++;
-	nbr = malloc(digits_size + 1 * sizeof(char));
-	if (nbr == NULL || digits == NULL)
-		return (NULL);
-	i = 0;
-	j = 0;
-	if (n < 0)
-		nbr[i++] = '-';
-	while (i < digits_size)
+	s = 0;
+	len = 2;
+	if (n == 2147483647 || n == -2147483648)
 	{
-		nbr[i] = digits[j] + '0';
-		i++;
-		j++;
+		max_min(n, &s);
+		return (s);
 	}
-	nbr[i] = 0;
-	return (nbr);
+	len = count_num(n, len);
+	s = (char *)malloc((len) * sizeof(char));
+	if (!s)
+		return (0);
+	len--;
+	fill(n, len, s);
+	return (s);
 }

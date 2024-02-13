@@ -6,24 +6,27 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:22:09 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 12:23:46 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:01:38 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	char *str;
-	unsigned int i;
+	int i;
+	int i2;
 
-	if (!s || !f || !(str = ft_strdup(s)))
-		return (0);
 	i = 0;
-	while (str[i])
+	i2 = 0;
+	if (s != NULL && f != NULL)
 	{
-		str[i] = f(i, str[i]);
-		i++;
+		i = ft_strlen(s);
+		while (i2 < i)
+		{
+			(*f)(i2, s);
+			s++;
+			i2++;
+		}
 	}
-	return (str);
 }
