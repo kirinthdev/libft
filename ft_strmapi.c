@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:21:38 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 12:21:41 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:37:08 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *str;
-	unsigned int i;
+	char			*str;
+	unsigned int	i;
 
-	if (!s || !f || !(str = ft_strdup(s)))
-		return (0);
+	str = ft_strdup(s);
+	if (!s || !f || !str)
+	{
+		free(str);
+		return (NULL);
+	}
 	i = 0;
 	while (str[i])
 	{

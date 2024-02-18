@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 11:01:14 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 17:29:20 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:10:50 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,8 @@ static int	input_strings(char **arr, char const *s, size_t count, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char **arr;
-	size_t count;
+	char	**arr;
+	size_t	count;
 
 	if (!s)
 		return (NULL);

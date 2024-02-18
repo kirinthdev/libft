@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 13:39:30 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:51:30 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:15:54 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(unsigned long count, unsigned long size)
 {
-	void *ptr;
+	void	*ptr;
 
 	ptr = malloc(count * size);
 	if (ptr != 0)

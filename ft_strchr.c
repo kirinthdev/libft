@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:26:38 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:52:32 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:01:41 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char ch;
+	char	ch;
 
 	ch = (char)c;
 	while (*s != '\0')

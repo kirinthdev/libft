@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:26:51 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:52:59 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:01:22 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned long len;
-	char ch;
+	unsigned long	len;
+	char			ch;
 
 	ch = (char)c;
 	len = ft_strlen(s);

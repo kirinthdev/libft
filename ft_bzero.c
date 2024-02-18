@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:28:11 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:51:26 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:02:12 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, unsigned long n)
 {
-	unsigned long count;
-	unsigned char *ptr;
+	unsigned long	count;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
 	count = 0;

@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:45:06 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 17:09:20 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:17:00 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	max_min(int n, char **s)
 
 char	*ft_itoa(int n)
 {
-	char *s;
-	size_t len;
+	char	*s;
+	size_t	len;
 
 	s = 0;
 	len = 2;

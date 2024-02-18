@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/07 17:45:58 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:53:03 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:13:17 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s1 || !set)
 		return (0);

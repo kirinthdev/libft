@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:26:46 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 12:27:23 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:00:51 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	unsigned int nbr;
+	unsigned int	nbr;
 
 	if (nb < 0)
 	{

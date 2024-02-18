@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 10:53:01 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/16 10:53:02 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:00:07 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new;
-	t_list *new_list;
-	void *ptr;
+	t_list	*new;
+	t_list	*new_list;
+	void	*ptr;
 
 	if (!lst || !del || !f)
 		return (NULL);

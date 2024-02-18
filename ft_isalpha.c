@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 12:12:13 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:51:39 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:11:12 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	int isalpha;
+	int	isalpha;
 
 	isalpha = 0;
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))

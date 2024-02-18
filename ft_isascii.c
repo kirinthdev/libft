@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 11:54:42 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:51:44 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:06:57 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	int isascii;
+	int	isascii;
 
 	isascii = 0;
 	if (c >= 0 && c <= 127)

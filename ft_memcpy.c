@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 11:28:34 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:52:16 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:08:31 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	unsigned char *dstc;
-	unsigned char *srcc;
+	size_t			i;
+	unsigned char	*dstc;
+	unsigned char	*srcc;
 
 	if (dst == NULL && src == NULL)
 		return (NULL);

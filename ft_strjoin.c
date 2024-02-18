@@ -6,36 +6,26 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 10:53:49 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/09 11:52:39 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:42:07 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *dst, char const *src)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new;
-	size_t len_dst;
-	size_t len_src;
-	register size_t i;
+	char	*ptr;
+	size_t	total_len;
 
-	if (!src)
-		return (NULL);
-	len_dst = (dst ? ft_strlen(dst) : 0);
-	len_src = ft_strlen(src);
-	if (!(new = (char *)malloc((len_dst + len_src + 1) * sizeof(char))))
-		return (NULL);
-	i = 0;
-	while (i < len_dst)
+	total_len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	ptr = (char *)malloc(total_len * sizeof(char));
+	if (ptr)
 	{
-		new[i] = dst[i];
-		++i;
+		ft_strlcpy(ptr, s1, ft_strlen(s1) + 1);
+		ft_strlcat(ptr, s2, total_len);
+		ptr[total_len - 1] = '\0';
+		return (ptr);
 	}
-	while (i < len_dst + len_src)
-	{
-		new[i] = src[i - len_dst];
-		++i;
-	}
-	new[i] = '\0';
-	return (new);
+	else
+		return (0);
 }

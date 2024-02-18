@@ -6,7 +6,7 @@
 /*   By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:22:09 by sergmart          #+#    #+#             */
-/*   Updated: 2024/02/13 16:01:38 by sergmart         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:01:56 by sergmart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
-	int i2;
+	int	i;
+	int	i2;
 
 	i = 0;
 	i2 = 0;
