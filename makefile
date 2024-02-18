@@ -6,7 +6,7 @@
 #    By: sergmart <sergiomga136@gmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/26 12:46:36 by sergmart          #+#    #+#              #
-#    Updated: 2024/02/13 15:55:10 by sergmart         ###   ########.fr        #
+#    Updated: 2024/02/18 17:27:29 by sergmart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,12 +50,24 @@ SRCS = ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
+		
+BNS_SRCS = 	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
 
 # ---------------------------------------------------------------------------- #
 #                                   UTENSILS                                   #
 # ---------------------------------------------------------------------------- #
 
 OBJS		= $(SRCS:%.c=%.o)
+
+BNS_OBJS	= $(BNS_SRCS:%.c=%.o)
 
 FLAGS		= -Wall -Werror -Wextra
 
@@ -69,8 +81,12 @@ $(NAME):
 
 all: $(NAME)
 
+bonus: $(NAME)
+	gcc $(FLAGS) -c $(BNS_SRCS) -I ./
+	ar rc $(NAME) $(BNS_OBJS)
+
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(BNS_OBJS)
 
 fclean: clean
 	@rm -f $(NAME)
